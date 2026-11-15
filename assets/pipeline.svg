@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 170" width="100%" role="img" aria-label="Evaluation pipeline: prompt, local LLM, metrics, LLM judge, scorecard.">
+  <style>
+    :root { --ink: #1f2328; --mute: #656d76; --line: #d0d7de; --acc: #cf4a12; }
+    @media (prefers-color-scheme: dark) {
+      :root { --ink: #e6edf3; --mute: #8b949e; --line: #30363d; --acc: #ff6b2c; }
+    }
+    .sans { font-family: -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; }
+    .mono { font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .wire { stroke: var(--line); stroke-width: 1.2; }
+    .stop { fill: var(--ink); }
+    .idx { fill: var(--acc); font-size: 12px; letter-spacing: 1px; }
+    .ttl { fill: var(--ink); font-size: 18px; font-weight: 600; }
+    .sub { fill: var(--mute); font-size: 12px; }
+    .pkt { fill: var(--acc); }
+    .bar { fill: var(--ink); transform-box: fill-box; transform-origin: left center; animation: grow 6s ease-in-out infinite; }
+    .bar.b2 { animation-delay: .25s; } .bar.b3 { animation-delay: .5s; }
+    @keyframes grow { 0%, 70% { transform: scaleX(0); } 82%, 96% { transform: scaleX(1); } 100% { transform: scaleX(0); } }
+  </style>
+
+  <line class="wire" x1="40" y1="40" x2="1160" y2="40"/>
+  <circle class="pkt" r="4" cy="40">
+    <animate attributeName="cx" values="40;1000;1000" keyTimes="0;0.72;1" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.72;0.76;1" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <g>
+    <circle class="stop" cx="40" cy="40" r="4"/>
+    <circle class="stop" cx="280" cy="40" r="4"/>
+    <circle class="stop" cx="520" cy="40" r="4"/>
+    <circle class="stop" cx="760" cy="40" r="4"/>
+    <circle class="stop" cx="1000" cy="40" r="4"/>
+  </g>
+
+  <g>
+    <text class="mono idx" x="40" y="76">01</text>
+    <text class="sans ttl" x="40" y="102">Prompt</text>
+    <text class="mono sub" x="40" y="124">zero-shot, few-shot,</text>
+    <text class="mono sub" x="40" y="142">chain-of-thought</text>
+
+    <text class="mono idx" x="280" y="76">02</text>
+    <text class="sans ttl" x="280" y="102">Local model</text>
+    <text class="mono sub" x="280" y="124">llama.cpp, GGUF,</text>
+    <text class="mono sub" x="280" y="142">CPU only</text>
+
+    <text class="mono idx" x="520" y="76">03</text>
+    <text class="sans ttl" x="520" y="102">Metrics</text>
+    <text class="mono sub" x="520" y="124">perplexity, pass@k,</text>
+    <text class="mono sub" x="520" y="142">semantic similarity</text>
+
+    <text class="mono idx" x="760" y="76">04</text>
+    <text class="sans ttl" x="760" y="102">LLM judge</text>
+    <text class="mono sub" x="760" y="124">rubric, agreement with</text>
+    <text class="mono sub" x="760" y="142">my labels, pairwise Elo</text>
+
+    <text class="mono idx" x="1000" y="76">05</text>
+    <text class="sans ttl" x="1000" y="102">Scorecard</text>
+    <rect class="bar" x="1000" y="116" width="150" height="5"/>
+    <rect class="bar b2" x="1000" y="127" width="104" height="5"/>
+    <rect class="bar b3" x="1000" y="138" width="128" height="5"/>
+  </g>
+</svg>
