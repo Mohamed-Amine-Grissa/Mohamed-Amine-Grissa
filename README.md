@@ -1,8 +1,10 @@
 <img src="./assets/hero.svg" width="100%" alt="Mohamed Amine Grissa. Computer science engineering student at ISSAT Sousse. Backend systems in Java, and evaluation of language models."/>
 
-I am a computer science engineering student at ISSAT Sousse, Tunisia. I build backend systems in Java and Spring, and I spend the rest of my time on one question: how do you know that a language model is good enough for the job?
+I am a computer science engineering student at ISSAT Sousse, Tunisia, and artificial intelligence is the part of this field that I want to be excellent at. Neural networks and large language models are what I study when nobody asks me to. I want to understand how they learn, why they fail, and how to prove that one is good enough before anyone depends on it. That is why my internship was about evaluation: I ran local models on a laptop CPU and measured them, because a model that only looks good is not good.
 
-The handle comes from Norse mythology. Ratatoskr is the squirrel that carries messages along the world tree. Most of what I build moves messages too: between services, through a broker, or into a model and back.
+I am also a software engineer, and I think that matters for AI. A model is useful only when it runs inside a system that works, so I build that system too: services in Java and Spring, messaging with RabbitMQ, secured APIs. My goal is to become an AI engineer who can take a model from an experiment to something people can rely on.
+
+The handle comes from Norse mythology. Ratatoskr is the squirrel that carries messages along the world tree. Most of what I build moves messages too: between services or into a model and back.
 
 ## Selected work
 
